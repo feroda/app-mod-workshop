@@ -151,9 +151,6 @@ def generate_caption(event, context):
     # Print the caption (you can also store it or use it as needed)
     print(f"[GCFv{GCF_VERSION}] Generated caption: {caption}")
 
-    # TODO upload to images DB as caption.
-    # **MySQL Update Functionality**
-
     # Construct the connection string (replace placeholders with your actual values)
     # My goodness, pymysql - you could support connection string, bro!
 

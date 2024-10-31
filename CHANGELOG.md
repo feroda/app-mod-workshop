@@ -1,6 +1,7 @@
 ## CHANGELOG
 
 ```
+2024-10-31 v1.10.10 -- Putting App_NAME in Dockerfile at least.
 2024-10-31 v1.10.9 -- H1 title.. nothing more
 2024-10-31 v1.10.8 -- Trying to fix APP_NAME in DEV from CloudBuild - if it works copy to prod too.
 2024-10-31 v1.10.7 -- Restoring older index without images being pulled and squariefied, which is #spooky

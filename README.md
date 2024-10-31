@@ -1,7 +1,5 @@
 Self: https://github.com/Friends-of-Ricc/app-mod-workshop
 
-![from chrome](image.png)
-
 # TODO per Gregorio
 
 1. Aggiungi `.env.dist`

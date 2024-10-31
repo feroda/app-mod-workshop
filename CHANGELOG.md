@@ -1,6 +1,7 @@
 ## CHANGELOG
 
 ```
+2024-10-31 v1.10.9 -- H1 title.. nothing more
 2024-10-31 v1.10.8 -- Trying to fix APP_NAME in DEV from CloudBuild - if it works copy to prod too.
 2024-10-31 v1.10.7 -- Restoring older index without images being pulled and squariefied, which is #spooky
 2024-10-30 v1.10.6 -- Better image rendering if no rendering.. https://screenshot.googleplex.com/ASesmtDa7rg6gbU

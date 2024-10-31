@@ -2,7 +2,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>🎥 PHP Amarcord ✨🫧🎞️</h1>
+    <h1>🎥 PHP 🍂 Amarcord ✨🫧🎞️</h1>
     <div class='center'>
         [
             <a href='/'>🏠 Home</a>

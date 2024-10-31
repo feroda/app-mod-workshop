@@ -24,8 +24,13 @@ $images = $stmt->fetchAll();
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 <?php foreach ($images as $image): ?>
+    <!-- no troppo bislunghe le immagine scusami Gemini anche no.
     <div class="bg-white shadow-md rounded-lg overflow-hidden <?php echo empty($image['description']) ? 'flex flex-col' : ''; ?>">
         <img src="<?php echo $image['filename']; ?>" alt="Immagine" class="<?php echo empty($image['description']) ? 'flex-grow' : 'w-full h-48 object-cover'; ?>" />
+    -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="<?php echo $image['filename']; ?>" alt="Immagine" class="w-full h-48 object-cover" />
+
         <div class="p-4">
             <?php if (!empty($image['description'])): ?>
                 <p class="font-bold">Gemini Caption:</p>

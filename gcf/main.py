@@ -6,11 +6,12 @@
 * Vertex:
 * AI Studio: https://ai.google.dev/gemini-api/docs/vision
 
+v0.6 30oct24 Ipsale bugfix.
 v0.6 30oct24 DB with Fantastic 4 ENVs.
 v0.5 30oct24 DB integration seems to work.
 v0.4 30oct24 finally it works! pushing and cleaning up
 '''
-GCF_VERSION = '0.6'
+GCF_VERSION = '0.7'
 
 
 from google.cloud import storage
@@ -61,11 +62,11 @@ def gemini_describe_image_from_gcs(gcs_url, image_prompt=DEFAULT_PROMPT):
     return response.text
 
 def update_db_with_description(
-        image_filename, 
-        caption, 
-        db_user, 
-        db_pass, 
-        db_host, 
+        image_filename,
+        caption,
+        db_user,
+        db_pass,
+        db_host,
         db_name
         ):
     '''
@@ -173,11 +174,11 @@ def generate_caption(event, context):
         print("DB_NAME is not set. I cant proceed. Please get your ENV back together!")
         return -1
     update_db_with_description(
-        image_filename=file_name, 
-        caption=caption, 
-        db_user=db_user, 
-        db_pass=db_pass, 
-        db_host=db_host, 
+        image_filename=file_name,
+        caption=caption,
+        db_user=db_user,
+        db_pass=db_pass,
+        db_host=db_host,
         db_name=db_name)
     return True
 

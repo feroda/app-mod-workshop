@@ -38,7 +38,7 @@ DEFAULT_PROMPT = "Generate a caption for this image: "
 #     raise "TODO"
 
 def gemini_describe_image_from_gcs(gcs_url, image_prompt=DEFAULT_PROMPT):
-    '''This is currently broken..'''
+    '''This is currently working great.'''
 
     # TODO auto-detect project id
     aiplatform.init(project=PROJECT_ID, location="us-central1")

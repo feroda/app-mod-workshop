@@ -5,8 +5,7 @@ set -euo pipefail
 #source .env
 #source ~/git/app-mod-workshop-set-by-step/.env
 
-. .env ||
-    exit 1
+. .env || exit 1
 
 echo "Listing or Creating now bucket: $GS_BUCKET .."
 

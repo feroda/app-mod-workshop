@@ -2,14 +2,13 @@
 
 set -euo pipefail
 
-echo Sourcing .env..
-# source ../.env ||  fatal 2
+echo Sourcing .env locally..
 
-.  ~/git/app-mod-workshop-set-by-step/.env
+# Do what you need. This works for Riccardo:
+# source ../.env ||  fatal 2
+#.  ~/git/app-mod-workshop-set-by-step/.env
 
 echo "Pushing ☁️ f(x)☁ to 🪣 $GS_BUCKET, along with DB config.. (DB_PASS=$DB_PASS)"
-
-# gcloud functions deploy FUNCTION_NAME --set-env-vars FOO=bar,BAZ=boo
 
 echodo gcloud --project "$PROJECT_ID" functions deploy php_amarcord_generate_caption \
     --runtime python310 \

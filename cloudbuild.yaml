@@ -35,6 +35,8 @@ steps:
       -   "DB_HOST=$_DB_HOST"  # From CB trigger
       - '--set-env-vars'
       -   "DB_NAME=$_DB_NAME"  # From CB trigger
+      - '--set-env-vars'
+      -   "APP_NAME=$_APP_NAME"  # from ENV - doesnt seem to work otherwise https://screenshot.googleplex.com/3LQKnRmX9e8V8Fi
       # This works
       - '--set-secrets'
       -   "DB_PASS=projects/${_PROJECT_NUMBER}/secrets/php-amarcord-db-pass" # TODO works only for Riccardo, change with your own PROJECT_NUMBER

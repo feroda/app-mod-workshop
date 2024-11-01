@@ -17,8 +17,13 @@ steps:
       - >-
         $_AR_HOSTNAME/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA
     id: Push to Artifact Repository
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+
+
+
+
     # All configs for `gcloud run deploy` are here: https://cloud.google.com/sdk/gcloud/reference/run/deploy
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    id: Deploy to DEV version
     args:
       - run
       - deploy
@@ -58,7 +63,6 @@ steps:
     - APP_NAME="A PHP Amarcord app deployed via Cloud Build to dev - break me as much as you want!"
     - DEBUG="true"
     - CODE_REPO="https://github.com/${_GITHUB_USER}/app-mod-workshop/"
-    id: Deploy to DEV version
     entrypoint: gcloud
 
   # PROD copy

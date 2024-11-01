@@ -30,3 +30,4 @@ EXPOSE 80
 # https://stackoverflow.com/questions/59324794/google-cloud-run-port
 ENV PORT 80
 ENV APP_NAME "PHP Amarcord from Dockerfile"
+ENV PHP_ENV 'DFLT_DOCKERFILE'

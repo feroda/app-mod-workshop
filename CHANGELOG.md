@@ -1,6 +1,7 @@
 ## CHANGELOG
 
 ```
+2024-11-01 v1.10.12 -- After security patch in uploads/ by Davide Guerri.
 2024-11-01 v1.10.11 -- Putting PHP_ENV in Dockerfile and cloudbuild - god knows if it will help.
 2024-10-31 v1.10.10 -- Putting App_NAME in Dockerfile at least.
 2024-10-31 v1.10.9 -- H1 title.. nothing more

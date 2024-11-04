@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
 
     // Generate a unique, random filename to avoid collisions and predictable names
-    $filename = uniqid() . '_' .  basename($_FILES['image']['name']);
+    $filename = basename($_FILES['image']['name']);
     $destination = 'uploads/' . $filename;
 
     // Get the file extension
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     if (in_array($ext, $allowed_extensions)) {
         if (move_uploaded_file($_FILES['image']['tmp_name'], $destination)) {
             $stmt = $pdo->prepare("INSERT INTO images (user_id, filename) VALUES (?, ?)");
-            $stmt->execute([$_SESSION['user_id'], $filename]);
+            $stmt->execute([$_SESSION['user_id'], $destination]);
             echo "Immagine caricata con successo!";
         } else {
             echo "Errore nel caricamento dell'immagine.";

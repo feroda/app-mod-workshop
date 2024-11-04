@@ -1,11 +1,12 @@
 #!/bin/bash
 
-DEPLOY_VER='1.1b'
+DEPLOY_VER='1.2'
 
 ########################
 # CHANGELOG
 ########################
 #
+# 4nov24  v1.2 Ecplicited the Project Number
 # 8oct24  v1.1b Enabled IAM: for GCE-SA to access SM.
 # 8oct24  v1.1 Adding DB_PASS from Secret Manager
 # 6oct24  v1.0 All of it.
@@ -21,7 +22,8 @@ set -euo pipefail
 
 #    --set-env-vars PORT="80" \
 # ERROR: (gcloud.run.deploy) spec.template.spec.containers[0].env: The following reserved env names were provided: PORT. These values are automatically set by the system.
-SECRET_MANAGER_PERMAURL_DB_PASS='projects/839850161816/secrets/php-amarcord-db-pass'
+SECRET_MANAGER_PERMAURL_DB_PASS="projects/$PROJECT_NUMBER/secrets/php-amarcord-db-pass"
+
 APP_VERSION="$(cat VERSION)"
 # For Riccardo
 #    --set-env-vars DB_PASS="$DB_PASS" \

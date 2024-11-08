@@ -1,5 +1,9 @@
+# Test
 docker build . -t php7.4
 docker run -p 8080:8080 --env-file .env php7.4
+
+# Deploy
+gcloud run deploy app-mod-workshop --source $(pwd) --region europe-west8 --allow-unauthenticated
 
 # Workshop: Application Modernization in GCP
 Codebase for the workshop "Application Modernization in GCP"

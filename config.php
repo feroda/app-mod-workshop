@@ -1,9 +1,9 @@
 <?php
 // Configurazione del database
-$db_host = '34.154.3.147';
-$db_name = 'image_catalog';
-$db_user = 'appmod-phpapp-user';
-$db_pass = 'cielcio1234!';
+$db_host = getenv('DB_HOST');
+$db_name = getenv('DB_NAME') ?: 'image_catalog';
+$db_user = getenv('DB_USER') ?: 'appmod-phpapp-user';
+$db_pass = getenv('DB_PASS');
 
 try {
     $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);

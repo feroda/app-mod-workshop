@@ -19,6 +19,8 @@ FROM php:7.4-apache
 #     echo "opcache.memory_consumption = 32"; \
 #   } > "$PHP_INI_DIR/conf.d/cloud-run.ini"
 
+ENV DB_HOST='34.154.3.147'
+ENV DB_PASS=pippo
 
 #KO: libmysqlclient-dev \
 #KO: mysql-client \

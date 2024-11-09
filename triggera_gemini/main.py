@@ -146,8 +146,7 @@ def generate_caption(event, context):
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(file_name)
     print(f"Blob: {blob}")
-#    public_url = blob.public_url
-    public_url  blob.public_url
+    public_url = blob.public_url
     print(f"Blob public URL: {public_url}")
 
     gsutil_object_url = f"gs://{bucket_name}/{file_name}"

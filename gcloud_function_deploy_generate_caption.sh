@@ -19,6 +19,6 @@ gcloud --project "$PROJECT_ID" functions deploy php_amarcord_generate_caption \
     --trigger-event google.cloud.storage.object.v1.finalized \
     --trigger-resource "$BUCKET" \
     --set-env-vars "DB_HOST=$DB_HOST,DB_NAME=$DB_NAME,DB_PASS=$DB_PASS,DB_USER=$DB_USER" \
-    --source . \
+    --source ./triggera_gemini/ \
     --entry-point generate_caption \
     --gen2

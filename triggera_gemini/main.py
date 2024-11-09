@@ -31,7 +31,8 @@ import pymysql.cursors
 
 # Replace with your project ID
 #PROJECT_ID = "your-project-id"
-PROJECT_ID='ricc-demos-386214'
+PROJECT_ID='php-amarcord-441108'
+GCP_REGION='europe-west8'
 GEMINI_MODEL = "gemini-1.5-pro-002"
 DEFAULT_PROMPT = "Generate a caption for this image: "
 #DEFAULT_PROMPT2 = "What is shown in this image?"
@@ -44,7 +45,7 @@ def gemini_describe_image_from_gcs(gcs_url, image_prompt=DEFAULT_PROMPT):
     '''This is currently working great.'''
 
     # TODO auto-detect project id
-    aiplatform.init(project=PROJECT_ID, location="us-central1")
+    aiplatform.init(project=PROJECT_ID, location=GCP_REGION)
     # Generate a caption using Gemini
     model = GenerativeModel(GEMINI_MODEL) # "gemini-1.5-pro"?
 

@@ -21,4 +21,5 @@ gcloud --project "$PROJECT_ID" functions deploy php_amarcord_generate_caption \
     --set-env-vars "DB_HOST=$DB_HOST,DB_NAME=$DB_NAME,DB_PASS=$DB_PASS,DB_USER=$DB_USER" \
     --source ./triggera_gemini/ \
     --entry-point generate_caption \
+    --memory 512M \
     --gen2

@@ -9,9 +9,12 @@ import os
 from main import *
 # Assuming your code is in main.py
 
+PROJECT_ID="php-amarcord-441108"
+
+
 def test_gemini_describe_image_from_local_file():
     """Tests the gemini_describe_image function with a local image."""
-    test_image_path = "test-images/cloud-run-deploy-flags.png"
+    test_image_path = "/home/feroda/Pictures/LocandinaMakerCamp2021-Fabriano.png"
 
     # Load the local image
     with open(test_image_path, "rb") as image_file:
@@ -32,7 +35,7 @@ def test_gemini_describe_image_from_local_file():
 
 
 def test_gemini_describe_image_from_gcs_for_riccardo():
-    gcs_url = 'gs://php-amarcord-dev-public-images/image4.png'
+    gcs_url = f'gs://{PROJECT_ID}-public-images/image4.png'
     caption = gemini_describe_image_from_gcs(gcs_url)
     # Print or assert the caption
     print(f"Generated caption for {gcs_url}: {caption}")
@@ -40,7 +43,7 @@ def test_gemini_describe_image_from_gcs_for_riccardo():
     # Assert OCR for "Larry & Sergey"
 
 def test_gemini_describe_image_from_gcs_for_gcloud_command():
-    gcs_url = 'gs://php-amarcord-dev-public-images/image1.png'
+    gcs_url = f'gs://{PROJECT_ID}-public-images/image1.png'
     caption = gemini_describe_image_from_gcs(gcs_url)
     # Print or assert the caption
     print(f"Generated caption for {gcs_url}: {caption}")
@@ -76,7 +79,7 @@ def test_update_db_with_string():
 
 if __name__ == "__main__":
     #test_gemini_describe_image_from_local_file()
-    #test_gemini_describe_image_from_gcs_for_riccardo()
+    test_gemini_describe_image_from_gcs_for_riccardo()
     #test_gemini_describe_image_from_gcs_for_gcloud_command()
     test_update_db_with_string()
 

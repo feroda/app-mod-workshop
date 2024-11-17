@@ -4,6 +4,7 @@ set -euo pipefail
 
 # Your Cloud Run Service Name, eg php-amarcord-dev
 SERVICE_NAME='php-amarcord-dev'
+SERVICE_NAME='app-mod-workshop'
 BUCKET="${PROJECT_ID}-public-images"
 GS_BUCKET="gs://${BUCKET}"
 
